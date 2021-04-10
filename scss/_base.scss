@@ -12,6 +12,7 @@ body{
   font-weight: var(--font-medium);
   color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 h1,h2,p{
   margin: 0;

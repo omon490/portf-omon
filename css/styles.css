@@ -60,6 +60,7 @@ body {
   font-weight: var(--font-medium);
   color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1, h2, p {
@@ -327,7 +328,7 @@ img {
 }
 
 .home__container {
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) + 3rem);
   row-gap: 5rem;
 }
 
@@ -362,7 +363,13 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 295px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 588px) {
+  .home__img {
+    width: 290px;
+  }
 }
 
 /* ===== ABOUT =====*/
