@@ -362,8 +362,8 @@ img {
 .home__img {
   position: absolute;
   right: 0;
-  bottom: 0;
-  width: 500px;
+  bottom: -25px;
+  width: 450px;
 }
 
 @media only screen and (max-width: 588px) {
