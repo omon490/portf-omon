@@ -76,5 +76,33 @@ sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
 
+const form = document.querySelector(".contact__form")
+const nameInput = document.querySelector(".name__input-js")
+const emailInput = document.querySelector(".email__input-js")
+const messageInput = document.querySelector(".message__input-js")
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault()
+  const nameInputValue = nameInput.value
+  const emailInputValue = emailInput.value
+  const messageInputValue = messageInput.value
+
+  if(nameInputValue && emailInputValue && messageInputValue) {
+   await fetch("http://localhost:4848/post", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: nameInputValue,
+      email: emailInputValue,
+      message: messageInputValue
+    })
+  })
+  alert("The message sent!")
+  }
+})
+
+
 
 
