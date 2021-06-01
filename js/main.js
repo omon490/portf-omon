@@ -9,6 +9,7 @@ const showMenu = (toggleId, navId) =>{
       })
   }
 }
+
 showMenu('nav-toggle','nav-menu')
 
 /*===== REMOVE MENU MOBILE =====*/
@@ -88,8 +89,9 @@ form.addEventListener("submit", async (e) => {
   const messageInputValue = messageInput.value
 
   if(nameInputValue && emailInputValue && messageInputValue) {
-   await fetch("http://localhost:4848/post", {
+   await fetch("https://server-portf-omon.herokuapp.com/post", {
     method: "POST",
+    mode: 'no-cors',
     headers: {
       "Content-Type": "application/json"
     },
