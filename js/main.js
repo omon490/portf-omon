@@ -89,7 +89,7 @@ form.addEventListener("submit", async (e) => {
   const messageInputValue = messageInput.value
 
   if(nameInputValue && emailInputValue && messageInputValue) {
-   await fetch("https://server-portf-omon.herokuapp.com/post", {
+   await fetch("https://server-portf-omon.herokuapp.com//post", {
     method: "POST",
     mode: 'no-cors',
     headers: {
